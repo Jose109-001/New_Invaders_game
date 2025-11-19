@@ -1,0 +1,134 @@
+<style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: white;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin: 20px 0;
+        text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        animation: glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px rgba(0, 255, 255, 0.8),
+            0 0 20px rgba(0, 255, 255, 0.5);
+        }
+        to {
+          text-shadow: 0 0 20px rgba(0, 255, 255, 1),
+            0 0 30px rgba(0, 255, 255, 0.8);
+        }
+      }
+
+      .game-container {
+        position: relative;
+        margin: 20px 0;
+      }
+
+      canvas {
+        border: 3px solid #00ffff;
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        background: #000;
+      }
+
+      .controls {
+        text-align: center;
+        margin: 20px 0;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        max-width: 800px;
+      }
+
+      .controls h2 {
+        color: #00ff88;
+        margin-bottom: 15px;
+      }
+
+      .control-item {
+        display: inline-block;
+        margin: 10px 20px;
+        padding: 10px 20px;
+        background: rgba(0, 255, 136, 0.1);
+        border-radius: 5px;
+        border-left: 3px solid #00ff88;
+      }
+
+      .control-item strong {
+        color: #00ffff;
+      }
+
+      #gameOverScreen,
+      #winScreen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.95);
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        display: none;
+        border: 3px solid #ff0000;
+        z-index: 10;
+      }
+
+      #winScreen {
+        border-color: #00ff00;
+      }
+
+      #gameOverScreen h2,
+      #winScreen h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #ff0000;
+      }
+
+      #winScreen h2 {
+        color: #00ff00;
+      }
+
+      .restart-btn {
+        padding: 15px 40px;
+        font-size: 1.2em;
+        background: linear-gradient(135deg, #00ff88, #00cc6a);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+        margin-top: 20px;
+      }
+
+      .restart-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 255, 136, 0.6);
+      }
+
+      @media (max-width: 850px) {
+        h1 {
+          font-size: 2em;
+        }
+
+        canvas {
+          max-width: 90vw;
+          height: auto;
+        }
+      }
+    </style>
