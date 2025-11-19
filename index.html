@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Invaders - Play Now!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>🚀 SPACE INVADERS 🛸</h1>
+
+    <div class="game-container">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+      <div id="gameOverScreen">
+        <h2>GAME OVER!</h2>
+        <p style="font-size: 1.5em; margin: 20px 0">
+          Final Score: <span id="finalScore">0</span>
+        </p>
+        <button class="restart-btn" onclick="restartGame()">Play Again</button>
+      </div>
+
+      <div id="winScreen">
+        <h2>YOU WIN!</h2>
+        <p style="font-size: 1.5em; margin: 20px 0">
+          Final Score: <span id="winScore">0</span>
+        </p>
+        <button class="restart-btn" onclick="restartGame()">Play Again</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <h2>🎮 Controls</h2>
+      <div class="control-item">
+        <strong>← →</strong> Arrow Keys - Move Ship
+      </div>
+      <div class="control-item"><strong>SPACE</strong> - Fire Bullet</div>
+      <div class="control-item"><strong>P</strong> - Pause Game</div>
+    </div>
+
+    <script src="space_invaders.js"></script>
+  </body>
+</html>
